@@ -62,3 +62,24 @@ footer{padding:0 45px 25px;display:flex;justify-content:space-between;font-size:
 .publication-title a{text-decoration:underline}.publication-conference{font-size:13px;font-style:italic;margin:3px 0 6px}
 footer small{font-size:10px}
 @media(max-width:760px){.section-title{align-items:flex-start}.section-icon{margin-top:1px}}
+
+/* Portfolio detail expansion: native HTML, no JavaScript dependency. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.featured-project{border-left:3px solid var(--accent);padding-left:18px}
+.project>h3.project-title{font-size:16px;font-weight:600;margin-bottom:6px}
+.technology-tags{display:flex;flex-wrap:wrap;gap:5px 7px;list-style:none;padding:0;margin:10px 0 12px}
+.technology-tags li{font-size:11px;line-height:1.5;border:1px solid var(--line);border-radius:3px;padding:3px 7px;color:var(--accent);background:#f7f9fa}
+.project-expansion{margin:12px 0 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.project-expansion>summary{font-size:12px;padding:9px 0;font-weight:500;min-height:38px}
+.project-body{padding:5px 0 14px;overflow-wrap:anywhere}
+.project-facts{margin:0}.project-facts>div{display:grid;grid-template-columns:120px minmax(0,1fr);gap:14px;margin:0 0 15px}
+.project-facts dt{font-size:12px;color:var(--accent);font-weight:600;line-height:1.65}.project-facts dd{margin:0;font-size:13px;line-height:1.75}
+.research-results{margin-top:20px}.research-results h4{font-size:14px;color:var(--accent);margin-bottom:12px}
+.table-scroll{overflow-x:auto}.research-results table{width:100%;border-collapse:collapse;font-size:12px;line-height:1.65}.research-results caption{text-align:left;color:var(--muted);font-size:11px;margin-bottom:8px}
+.research-results th,.research-results td{text-align:left;vertical-align:top;padding:10px 9px;border-bottom:1px solid var(--line)}
+.research-results thead th{background:#f2f6f8;color:var(--accent);font-weight:600}.research-results tbody th{font-weight:500;width:34%}.research-results tbody th span{font-size:11px;font-weight:400;color:var(--muted)}
+.project .source-note{font-size:11px;color:var(--muted);margin-top:10px;line-height:1.65}
+.experience-responsibilities{padding-left:19px;font-size:13px;margin:8px 0 0}.experience-responsibilities li{margin-bottom:7px}
+.skill-groups{display:grid;grid-template-columns:1fr 1fr;gap:22px 20px}.skill-group h3{font-size:14px;color:var(--accent);margin-bottom:9px}.skill-group .technology-tags{margin:0}
+@media(max-width:760px){.project-facts>div{grid-template-columns:1fr;gap:3px;margin-bottom:18px}.featured-project{padding-left:14px}.project-expansion>summary{min-height:44px;padding:11px 0}.research-results th,.research-results td{padding:8px 6px;font-size:11px}.skill-groups{grid-template-columns:1fr}.project-body{font-size:13px}}
+@media print{.project-body{display:block!important}.project{break-inside:auto}.project-facts>div{break-inside:avoid}.technology-tags li{background:white}.featured-project{padding-left:12px}.project-expansion{border:0}.research-results tr{break-inside:avoid}}
