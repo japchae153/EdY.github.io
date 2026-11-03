@@ -223,6 +223,7 @@ main{padding-bottom:16px}
 .entry:first-child{padding-top:0;border-top:0}
 .entry-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 20px}
 .entry-head h3{font:650 19px/1.35 var(--sans);letter-spacing:-.01em}
+.emp-type{font-size:.8em;font-weight:400;letter-spacing:0;color:var(--muted);margin-left:.25em;white-space:nowrap}
 .entry-org{font:500 15.5px/1.4 var(--sans);color:var(--ink-2);margin:3px 0 0}
 .entry-org span{font-weight:400;color:var(--muted);margin-left:8px}
 .entry-dept{font:400 15px/1.4 var(--sans);color:var(--ink-2);margin-top:2px}
