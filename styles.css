@@ -219,6 +219,20 @@ main{min-width:0;max-width:740px;padding:72px 0 0}
 .tags li{font:500 12.5px/1 var(--sans);color:var(--ink-2);background:var(--tag);border-radius:4px;padding:6px 9px}
 .featured-project .tags li{background:var(--paper)}
 .project-links{font:500 14.5px/1.4 var(--sans);margin-top:8px}
+
+/* figures: paper figures sit between authors and summary; product images sit beside the card text */
+.pub-figure,.project-figure a{display:block;border:1px solid var(--rule);border-radius:6px;overflow:hidden;background:#fff}
+.pub-figure{margin-top:14px;max-width:600px}
+.pub-figure img,.project-figure img{display:block;width:100%;height:auto}
+.pub-figure:hover,.project-figure a:hover,.project-media a:hover img{border-color:var(--accent)}
+.project-figure{margin:18px 0 0}
+.project.has-media{display:grid;grid-template-columns:minmax(0,1fr) 200px;column-gap:32px;align-items:start}
+.project-text{grid-column:1;grid-row:1;min-width:0}
+.project-media{grid-column:2;grid-row:1;margin:4px 0 0}
+.project-media a{display:block}
+.project-media img{display:block;width:auto;max-width:100%;height:auto;max-height:260px;margin-inline:auto;border:1px solid var(--rule);border-radius:6px}
+.project-media figcaption{font:400 12px/1.4 var(--sans);color:var(--muted);text-align:center;margin-top:7px}
+.project-media figcaption a{color:inherit}
 .project-expansion{margin-top:4px}
 .project-expansion>summary{list-style:none;display:inline-flex;align-items:center;gap:9px;min-height:44px;cursor:pointer;font:600 14px/1 var(--sans);color:var(--accent);border-radius:4px}
 .project-expansion>summary::-webkit-details-marker{display:none}
@@ -324,6 +338,11 @@ main{min-width:0;max-width:740px;padding:72px 0 0}
   .xp-date{padding-top:0}
   .featured-project{padding:22px 18px 12px;margin-inline:-6px}
   .project-title{font-size:19px}
+  .project.has-media{grid-template-columns:minmax(0,1fr)}
+  .project-media{grid-column:1;grid-row:auto;margin:0 0 16px}
+  .project-media img{max-height:300px;margin-inline:0}
+  .project-media figcaption{text-align:left}
+  .project-text{grid-row:auto}
   .project-facts>div{grid-template-columns:minmax(0,1fr);row-gap:2px;padding:8px 0}
   .project-meta{display:block}
   .project-meta .date{display:block}
