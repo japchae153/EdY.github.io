@@ -164,6 +164,7 @@ main{min-width:0;max-width:740px;padding:72px 0 0}
 .entry-dept span{color:var(--muted);white-space:nowrap}
 .xp-body>p:not(.entry-org):not(.entry-dept):not(.entry-note){font-size:16px;line-height:1.6;max-width:64ch;margin-top:10px}
 .xp-body>p.entry-note{font:400 14.5px/1.45 var(--sans);color:var(--muted);margin-top:4px}
+.xp-body>ul+p.entry-note{margin-top:12px;max-width:64ch}
 .entry-points{margin-top:10px;max-width:64ch}
 .entry-points li{position:relative;padding-left:18px;font-size:15.5px;line-height:1.6}
 .entry-points li+li{margin-top:5px}
