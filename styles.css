@@ -220,17 +220,21 @@ main{min-width:0;max-width:740px;padding:72px 0 0}
 .featured-project .tags li{background:var(--paper)}
 .project-links{font:500 14.5px/1.4 var(--sans);margin-top:8px}
 
-/* figures: paper figures sit between authors and summary; product images sit beside the card text */
-.pub-figure,.project-figure a{display:block;border:1px solid var(--rule);border-radius:6px;overflow:hidden;background:#fff}
-.pub-figure{margin-top:14px;max-width:600px}
-.pub-figure img,.project-figure img{display:block;width:100%;height:auto}
-.pub-figure:hover,.project-figure a:hover,.project-media a:hover img{border-color:var(--accent)}
-.project-figure{margin:18px 0 0}
-.project.has-media{display:grid;grid-template-columns:minmax(0,1fr) 200px;column-gap:32px;align-items:start}
+/* thumbnails: small, click to open the full image.
+   Papers: under the venue badge in the left column. Thesis and products: a narrow right column. */
+.pub-figure,.project-media a{display:block;width:fit-content;max-width:100%;border:1px solid var(--rule);border-radius:5px;overflow:hidden;background:#fff}
+.pub-figure img,.project-media img{display:block;max-width:100%;height:auto}
+.pub-figure:hover,.project-media a:hover{border-color:var(--accent)}
+.pub.has-figure{grid-template-columns:180px minmax(0,1fr);grid-template-rows:auto 1fr}
+.pub.has-figure .pub-venue{grid-column:1;grid-row:1}
+.pub.has-figure .pub-figure{grid-column:1;grid-row:2;align-self:start;margin-top:12px}
+.pub.has-figure .pub-main{grid-column:2;grid-row:1/span 2}
+.project.has-media{display:grid;grid-template-columns:minmax(0,1fr) 160px;column-gap:28px;align-items:start}
+.featured-project.has-media{grid-template-columns:minmax(0,1fr) 240px}
 .project-text{grid-column:1;grid-row:1;min-width:0}
 .project-media{grid-column:2;grid-row:1;margin:4px 0 0}
-.project-media a{display:block}
-.project-media img{display:block;width:auto;max-width:100%;height:auto;max-height:260px;margin-inline:auto;border:1px solid var(--rule);border-radius:6px}
+.project-media a{margin-inline:auto}
+.project-media img{width:auto;max-height:200px}
 .project-media figcaption{font:400 12px/1.4 var(--sans);color:var(--muted);text-align:center;margin-top:7px}
 .project-media figcaption a{color:inherit}
 .project-expansion{margin-top:4px}
@@ -338,9 +342,14 @@ main{min-width:0;max-width:740px;padding:72px 0 0}
   .xp-date{padding-top:0}
   .featured-project{padding:22px 18px 12px;margin-inline:-6px}
   .project-title{font-size:19px}
-  .project.has-media{grid-template-columns:minmax(0,1fr)}
-  .project-media{grid-column:1;grid-row:auto;margin:0 0 16px}
-  .project-media img{max-height:300px;margin-inline:0}
+  .pub.has-figure{grid-template-columns:minmax(0,1fr);grid-template-rows:none}
+  .pub.has-figure .pub-venue,.pub.has-figure .pub-main,.pub.has-figure .pub-figure{grid-column:1;grid-row:auto}
+  .pub.has-figure .pub-figure{order:3;margin-top:4px}
+  .pub-figure img{max-height:120px;width:auto}
+  .project.has-media,.featured-project.has-media{grid-template-columns:minmax(0,1fr)}
+  .project-media{grid-column:1;grid-row:auto;margin:0 0 14px}
+  .project-media a{margin-inline:0}
+  .project-media img{max-height:160px}
   .project-media figcaption{text-align:left}
   .project-text{grid-row:auto}
   .project-facts>div{grid-template-columns:minmax(0,1fr);row-gap:2px;padding:8px 0}
