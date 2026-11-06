@@ -268,6 +268,14 @@ main{min-width:0;max-width:740px;padding:72px 0 0}
 .mini-projects a{font:600 15.5px/1.35 var(--sans)}
 .mini-desc{font-size:15.5px;line-height:1.5;color:var(--ink-2)}
 .mini-kind{font:500 12.5px var(--sans);color:var(--muted);margin-left:4px;white-space:nowrap}
+.mini-projects.with-shots{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px 18px;padding-top:6px}
+.mini-projects.with-shots li{display:flex;flex-direction:column;align-items:stretch;padding:0;border-top:0}
+.mini-shot{display:flex;align-items:center;justify-content:center;height:218px;margin-bottom:12px;background:var(--paper-2);border:1px solid var(--rule);border-radius:6px;overflow:hidden}
+.mini-shot img{display:block;width:auto;height:auto;max-width:90%;max-height:196px;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,.14)}
+.mini-shot:hover{border-color:var(--accent)}
+.with-shots .mini-desc{margin-top:3px;font-size:14.5px}
+.with-shots .mini-kind{display:block;margin:4px 0 0}
+.with-shots .date{margin-top:4px;font:500 13px var(--sans);color:var(--muted)}
 
 /* compact rows: teaching, awards, activities */
 .rows li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:9px 0;border-top:1px solid var(--rule);font-size:15.5px;line-height:1.45}
@@ -365,6 +373,9 @@ main{min-width:0;max-width:740px;padding:72px 0 0}
   .prose .lead{font-size:20px}
   .mini-projects li{grid-template-columns:minmax(0,1fr) auto;row-gap:2px}
   .mini-desc{grid-column:1/-1;grid-row:2}
+  .mini-projects.with-shots{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mini-shot{height:190px}
+  .mini-shot img{max-height:170px}
   .tl-wrap{padding:0 14px;margin-inline:-4px}
   .tl{--tl-offset:0px}
   .tl-axis,.tl-lane a{grid-template-columns:minmax(0,1fr)}
